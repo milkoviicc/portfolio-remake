@@ -1,14 +1,27 @@
+'use client';
 import Image from "next/image";
 
 import heroImg from '../../public/assets/hero.png';
-import { Github, Linkedin, Mail } from "lucide-react";
+import typescriptIcon from '../../public/assets/frontend/typescript-icon.png';
+import reactIcon from '../../public/assets/frontend/react-icon.png';
+import nextjsIcon from '../../public/assets/frontend/nextjs-icon.png';
+import tailwindcssIcon from '../../public/assets/frontend/tailwindcss-icon.png';
+import framerIcon from '../../public/assets/frontend/framer-icon.png';
+import bootstrapIcon from '../../public/assets/frontend/bootstrap-icon.png';
 
+import { Github, Linkedin, Mail } from "lucide-react";
+import { motion } from "framer-motion";
 import {Roboto, Anton} from 'next/font/google';
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import NavbarItem from "./components/NavbarItem";
+import { MagicCard } from "@/components/magicui/magic-card";
+import { Particles } from "@/components/magicui/particles";
+
+
+
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -24,7 +37,8 @@ const anton = Anton({
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col w-screen h-screen bg-[#121A2A]">
+    <div className="relative flex flex-col w-full h-full bg-[#121A2A]">
+      <Particles quantity={50} className="fixed w-full"/>
       <div className="container mx-auto px-4 py-8">
         <div className={`flex justify-between items-center py-4 font-roboto`}>
           <NavbarItem value={'Milkoviicc'} className={`uppercase text-4xl text-[#C27AFF] ${roboto.className} font-bold`}/>
@@ -71,6 +85,58 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <h2 className={`${anton.className} font-bold text-6xl text-[#C27AFF]`}><NumberTicker value={7} className="text-[#C27AFF]" />+</h2>
             <p className={`${roboto.className} text-3xl text-[#DEDEDE]`}>Happy<br/>Clients</p>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 flex flex-col gap-8 py-16 ">
+        <h2 className={`uppercase text-purple-500 ${anton.className} text-6xl`}>My tech stack</h2>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="flex flex-col justify-center text-center py-4 bg-white/5 border-[1px] border-white/20 bakdrop-blur-2xl rounded-lg">
+            <motion.h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-4xl group-hover:text-fill`} whileHover={{ color: "#C27AFF" }} transition={{ duration: 0.3 }}>Frontend</motion.h3>
+            <div className="grid grid-cols-3 gap-4 mt-2">
+              <div className="flex flex-col gap-2 items-center justify-center">
+              <Image src={typescriptIcon} alt="Typescript" width={64} height={64} className="w-16 h-16"/>
+              <p className={`text-[#DEDEDE] ${roboto.className} text-lg`}>Typescript</p>
+              </div>
+              <div className="flex flex-col gap-2 items-center justify-center">
+              <Image src={reactIcon} alt="React" width={64} height={64} className="w-16 h-16"/>
+              <p className={`text-[#DEDEDE] ${roboto.className} text-lg`}>React</p>
+              </div>
+              <div className="flex flex-col gap-2 items-center justify-center">
+              <Image src={nextjsIcon} alt="NextJS" width={64} height={64} className="w-16 h-16"/>
+              <p className={`text-[#DEDEDE] ${roboto.className} text-lg`}>NextJS</p>
+              </div>
+              <div className="flex flex-col gap-2 items-center justify-center">
+              <Image src={tailwindcssIcon} alt="Tailwind CSS" width={64} height={64} className="w-16 h-16"/>
+              <p className={`text-[#DEDEDE] ${roboto.className} text-lg`}>Tailwind CSS</p>
+              </div>
+              <div className="flex flex-col gap-2 items-center justify-center">
+              <Image src={framerIcon} alt="Framer" width={64} height={64} className="w-16 h-16"/>
+              <p className={`text-[#DEDEDE] ${roboto.className} text-lg`}>Framer</p>
+              </div>
+              <div className="flex flex-col gap-2 items-center justify-center">
+              <Image src={bootstrapIcon} alt="Bootstrap" width={64} height={64} className="w-16 h-16"/>
+              <p className={`text-[#DEDEDE] ${roboto.className} text-lg`}>Bootstrap</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col justify-center text-center py-4 bg-white/5 border-[1px] border-white/20 bakdrop-blur-2xl rounded-lg">
+            <h3 className={`uppercase ${anton.className} text-[#DEDEDE] text-3xl`}>Frontend</h3>
+            <div className="grid grid-cols-3 gap-4 mt-2">
+              <div className="flex flex-col items-center justify-center">
+                <Image src={typescriptIcon} alt="Typescript" width={64} height={64} className="w-16 h-16"/>
+                <p className={`text-[#DEDEDE] ${roboto.className} text-sm`}>Typescript</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col justify-center text-center py-4 bg-white/5 border-[1px] border-white/20 bakdrop-blur-2xl rounded-lg">
+            <h3 className={`uppercase ${anton.className} text-[#DEDEDE] text-3xl`}>Frontend</h3>
+            <div className="grid grid-cols-3 gap-4 mt-2">
+              <div className="flex flex-col items-center justify-center">
+                <Image src={typescriptIcon} alt="Typescript" width={64} height={64} className="w-16 h-16"/>
+                <p className={`text-[#DEDEDE] ${roboto.className} text-sm`}>Typescript</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
