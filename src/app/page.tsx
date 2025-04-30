@@ -8,6 +8,7 @@ import { NumberTicker } from "@/components/magicui/number-ticker";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import NavbarItem from "./components/NavbarItem";
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -23,32 +24,32 @@ const anton = Anton({
 
 export default function Home() {
   return (
-    <div className="relative overflow-hidden flex flex-col w-screen h-screen bg-[#121A2A]">
+    <div className="relative flex flex-col w-screen h-screen bg-[#121A2A]">
       <div className="container mx-auto px-4 py-8">
         <div className={`flex justify-between items-center py-4 font-roboto`}>
-          <a href="#" className={`uppercase text-4xl text-[#C27AFF] ${roboto.className} font-bold`}>Milkoviicc</a>
+          <NavbarItem value={'Milkoviicc'} className={`uppercase text-4xl text-[#C27AFF] ${roboto.className} font-bold`}/>
           <nav className={`flex space-x-8 mr-24 uppercase text-2xl ${roboto.className} font-bold text-[#C27AFF]`}>
-            <a href="#">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
+            <NavbarItem value={'home'} className=""/>
+            <NavbarItem value={'projects'} className=""/>
+            <NavbarItem value={'about'} className=""/>
           </nav>
         </div>
       </div>
       
-      <div className="container mx-auto my-24 px-4 py-8 w-full flex">
-        <div className="flex flex-col gap-8">
+      <div className="container mx-auto my-8 px-4 py-8 w-full flex">
+        <div className="flex flex-col justify-center gap-8">
           <BoxReveal boxColor={"#8641C1"} duration={0.5}>
             <h1 className={`text-[#DEDEDE] text-shadow ${roboto.className} text-6xl leading-16 font-bold w-fit`}><span className="text-[#C27AFF] text-shadow-2xs">FRONTEND<br/></span>DEVELOPER</h1>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
-            <p className={`text-[#DEDEDE] max-w-[550px] break-words ${roboto.className} text-xl`}>Hey, I&apos;m Marko. A reliable Frontend developer with proven experience in building high-performance, responsive and modern web applications.</p>
+            <p className={`text-[#DEDEDE] max-w-full break-words ${roboto.className} text-xl`}>Hey, I&apos;m Marko. A reliable Frontend developer with proven experience in building high-performance, responsive and modern web applications.</p>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
             <InteractiveHoverButton className={`uppercase text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl cursor-pointer border-0 outline-0`}>Hire me</InteractiveHoverButton>
           </BoxReveal>
         </div>
         <BlurFade delay={0.25 * 0.05} inView>
-          <Image src={heroImg} width={650} height={750} alt="Hero image"/>
+          <Image src={heroImg} alt="Hero image" className="w-full image-floating"/>
         </BlurFade>
       </div>
 

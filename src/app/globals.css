@@ -46,6 +46,11 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: url('../../public/assets/arrowhead.png'), auto;
+}
+
+a:hover, button:hover {
+  cursor: url('../../public/assets/hand-pointer.png'), auto;
 }
 
 :root {
@@ -124,4 +129,20 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.image-floating {
+  animation: floating 3s ease infinite;
+  will-change: transform;
 }
