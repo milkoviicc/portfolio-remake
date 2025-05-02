@@ -38,6 +38,13 @@ export default function Home() {
   return (
     <div className="relative flex flex-col w-full h-full bg-[#121A2A]">
       <Particles quantity={50} className="fixed w-full"/>
+      <div className="flex flex-col fixed bottom-5 gap-3 w-fit px-6">
+        <a href="https://github.com/milkoviicc" className="text-[#C27AFF]" target="_blank"><Github size={32}/></a>
+        <a href="https://linkedin.com/in/milkoviicc" className="text-[#C27AFF]" target="_blank"><Linkedin size={32}/></a>
+        <a href="mailto:marko.milkovicc@gmail.com" className="text-[#C27AFF]" target="_blank"><Mail size={32}/></a>
+      </div>
+
+
       <div className="container mx-auto px-4 py-8">
         <div className={`flex justify-between items-center py-4 font-roboto`}>
           <NavbarItem value={'Milkoviicc'} className={`uppercase text-4xl text-[#C27AFF] ${roboto.className} font-bold`}/>
@@ -66,12 +73,9 @@ export default function Home() {
         </BlurFade>
       </div>
 
+
       <div className="w-full h-full flex">
-        <div className="flex flex-col gap-3 w-fit px-6">
-          <a href="https://github.com/milkoviicc" className="text-[#C27AFF]" target="_blank"><Github size={32}/></a>
-          <a href="https://linkedin.com/in/milkoviicc" className="text-[#C27AFF]" target="_blank"><Linkedin size={32}/></a>
-          <a href="mailto:marko.milkovicc@gmail.com" className="text-[#C27AFF]" target="_blank"><Mail size={32}/></a>
-        </div>
+
         <div className="container mx-auto flex justify-center items-center gap-24">
           <div className="flex items-center gap-4">
             <h2 className={`${anton.className} font-bold text-6xl text-[#C27AFF]`}><NumberTicker value={25} className="text-[#C27AFF]" />+</h2>
@@ -90,7 +94,7 @@ export default function Home() {
       <div className="container mx-auto px-4 flex flex-col gap-8 py-16 ">
         <h2 className={`uppercase text-purple-500 ${anton.className} text-6xl`}>My tech stack</h2>
         <div className="grid grid-cols-3 gap-4">
-          <div className="flex flex-col justify-center text-center py-4 bg-white/5 border-[1px] border-white/20 bakdrop-blur-2xl rounded-lg">
+          <div className="flex flex-col justify-center text-center py-4 rounded-lg">
             <motion.h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-4xl group-hover:text-fill`} whileHover={{ color: "#C27AFF" }} transition={{ duration: 0.3 }}>Frontend</motion.h3>
             <div className="grid grid-cols-3 gap-4 mt-2">
               <div className="flex flex-col gap-2 items-center justify-center">
