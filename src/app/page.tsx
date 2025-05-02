@@ -17,7 +17,6 @@ import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-b
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import NavbarItem from "./components/NavbarItem";
-import { MagicCard } from "@/components/magicui/magic-card";
 import { Particles } from "@/components/magicui/particles";
 
 
