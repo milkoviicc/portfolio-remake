@@ -20,7 +20,7 @@ import figmaIcon from '../../public/assets/other/figma-icon.png';
 import vercelIcon from '../../public/assets/other/vercel-icon.png';
 import gitIcon from '../../public/assets/other/git-icon.png';
 
-import { CogIcon, Github, Linkedin, Mail, Slack } from "lucide-react";
+import { Github, Linkedin, Mail, Slack } from "lucide-react";
 import { motion } from "framer-motion";
 import {Roboto, Anton} from 'next/font/google';
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -82,7 +82,7 @@ export default function Home() {
             <p className={`text-[#DEDEDE] max-w-full break-words ${roboto.className} text-xl`}>Hey, I&apos;m Marko. A reliable Frontend developer with proven experience in building high-performance, responsive and modern web applications.</p>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
-            <InteractiveHoverButton className={`uppercase text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl cursor-pointer border-0 outline-0`}>Hire me</InteractiveHoverButton>
+            <InteractiveHoverButton className={`uppercase text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl border-0 outline-0`}>Hire me</InteractiveHoverButton>
           </BoxReveal>
         </div>
         <BlurFade delay={0.25 * 0.05} inView>
