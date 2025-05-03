@@ -146,3 +146,7 @@ a:hover, button:hover {
   animation: floating 3s ease infinite;
   will-change: transform;
 }
+
+.transition-colors {
+  color: #C27AFF;
+}
