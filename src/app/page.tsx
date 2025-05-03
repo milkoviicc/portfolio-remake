@@ -3,12 +3,8 @@ import Image from "next/image";
 
 import heroImg from '../../public/assets/hero.png';
 
-import typescriptIcon from '../../public/assets/frontend/typescript-icon.png';
-import reactIcon from '../../public/assets/frontend/react-icon.png';
-import nextjsIcon from '../../public/assets/frontend/nextjs-icon.png';
-import tailwindcssIcon from '../../public/assets/frontend/tailwindcss-icon.png';
-import framerIcon from '../../public/assets/frontend/framer-icon.png';
-import bootstrapIcon from '../../public/assets/frontend/bootstrap-icon.png';
+import framerIcon from '../../public/assets/frontend/framer-motion.svg';
+import bootstrapIcon from '../../public/assets/frontend/Bootstrap_logo.svg';
 
 import nodejsIcon from '../../public/assets/backend/nodejs-icon.png';
 import mysqlIcon from '../../public/assets/backend/mysql-icon.png';
@@ -18,7 +14,7 @@ import postmanIcon from '../../public/assets/backend/postman-icon.png';
 
 import figmaIcon from '../../public/assets/other/figma-icon.png';
 import vercelIcon from '../../public/assets/other/vercel-icon.png';
-import gitIcon from '../../public/assets/other/git-icon.png';
+import gitIcon from '../../public/assets/other/git.svg';
 
 import { Github, Linkedin, Mail, Slack } from "lucide-react";
 import { motion } from "framer-motion";
@@ -32,6 +28,8 @@ import { Particles } from "@/components/magicui/particles";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import SpotlightCard from "@/blocks/Components/SpotlightCard/SpotlightCard";
 import TiltedCard from "@/blocks/Components/TiltedCard/TiltedCard";
+import { RiNextjsFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiTypescript } from "react-icons/si";
 
 
 
@@ -64,11 +62,11 @@ export default function Home() {
 
       <div className="container mx-auto px-4 py-8">
         <div className={`flex justify-between items-center py-4 font-roboto`}>
-          <NavbarItem value={'Milkoviicc'} className={`uppercase text-4xl text-[#C27AFF] ${roboto.className} font-bold`}/>
+          <NavbarItem value={'Milkoviicc'} className={`uppercase text-4xl text-[#C27AFF] ${roboto.className} font-bold cursor-none`}/>
           <nav className={`flex space-x-8 mr-24 uppercase text-2xl ${roboto.className} font-bold text-[#C27AFF]`}>
-            <NavbarItem value={'home'} className=""/>
-            <NavbarItem value={'projects'} className=""/>
-            <NavbarItem value={'about'} className=""/>
+            <NavbarItem value={'home'} className="cursor-none"/>
+            <NavbarItem value={'projects'} className="cursor-none"/>
+            <NavbarItem value={'about'} className="cursor-none"/>
           </nav>
         </div>
       </div>
@@ -82,7 +80,7 @@ export default function Home() {
             <p className={`text-[#DEDEDE] max-w-full break-words ${roboto.className} text-xl`}>Hey, I&apos;m Marko. A reliable Frontend developer with proven experience in building high-performance, responsive and modern web applications.</p>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
-            <InteractiveHoverButton className={`uppercase text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl border-0 outline-0`}>Hire me</InteractiveHoverButton>
+            <InteractiveHoverButton className={`uppercase text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl border-0 outline-0 cursor-none`}>Hire me</InteractiveHoverButton>
           </BoxReveal>
         </div>
         <BlurFade delay={0.25 * 0.05} inView>
@@ -94,7 +92,7 @@ export default function Home() {
       <div className="w-full h-full flex">
         <div className="container mx-auto flex justify-center items-center gap-24">
           <div className="flex items-center gap-4">
-            <h2 className={`${anton.className} font-bold text-6xl text-[#C27AFF]`}><NumberTicker value={25} className="text-[#C27AFF]" />+</h2>
+            <h2 className={`${anton.className} font-bold text-6xl text-[#C27AFF]`}><NumberTicker value={5} className="text-[#C27AFF]" />+</h2>
             <p className={`${roboto.className} text-3xl text-[#DEDEDE]`}>Completed<br/>Projects</p>
           </div>
           <div className="flex items-center gap-4">
@@ -102,40 +100,48 @@ export default function Home() {
             <p className={`${roboto.className} text-3xl text-[#DEDEDE]`}>Years of<br/>Experience</p>
           </div>
           <div className="flex items-center gap-4">
-            <h2 className={`${anton.className} font-bold text-6xl text-[#C27AFF]`}><NumberTicker value={7} className="text-[#C27AFF]" />+</h2>
+            <h2 className={`${anton.className} font-bold text-6xl text-[#C27AFF]`}><NumberTicker value={5} className="text-[#C27AFF]" />+</h2>
             <p className={`${roboto.className} text-3xl text-[#DEDEDE]`}>Happy<br/>Clients</p>
           </div>
         </div>
       </div>
       <div className="container mx-auto px-4 flex flex-col gap-8 py-32 ">
-        <h2 className={`uppercase text-purple-500 ${anton.className} text-3xl flex gap-4`}>Tech stack <Slack size={32} /></h2>
+        <h2 className={`uppercase text-purple-500 ${anton.className} text-3xl flex gap-4`}>Tech stack <motion.div animate={{rotate: 360}} transition={{repeat: Infinity, repeatType: 'loop', ease: 'linear', duration: 5}}><Slack size={32} /></motion.div></h2>
         <div className="grid grid-cols-3 gap-4 -mx-8 h-full">
           <TiltedCard>
             <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
               <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Frontend</h3>
               <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
                 <div className="flex items-center gap-2">
-                  <Image src={tailwindcssIcon} alt="Tailwind CSS"/>
+                  <div className="bg-[#222] px-1 py-1 rounded-lg">
+                    <RiTailwindCssFill size={32} fill="#23BCBB" />
+                  </div>
                   <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Tailwind CSS</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Image src={reactIcon} alt="React"/>
+                  <div className="bg-[#222] px-1 py-1 rounded-lg">
+                    <RiReactjsFill size={32} fill="#23BCBB" />
+                  </div>
                   <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>React</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Image src={nextjsIcon} alt="NextJS"/>
+                  <div className="bg-[#222] px-1 py-1 rounded-lg">
+                    <RiNextjsFill size={32} fill="#fff" />
+                  </div>
                   <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>NextJS</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Image src={typescriptIcon} alt="Typescript"/>
+                  <div className="px-1">
+                    <SiTypescript size={32} fill="#2D79C7" className="rounded-sm"/>
+                  </div>
                   <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Typescript</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Image src={framerIcon} alt="Framer"/>
+                  <Image src={framerIcon} alt="Framer Motion" width={32} height={32} className="rounded-sm"/>
                   <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Framer</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Image src={bootstrapIcon} alt="Bootstrap"/>
+                <Image src={bootstrapIcon} alt="Bootstrap" width={32} height={32} className="rounded-sm"/>
                   <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Bootstrap</p>
                 </div>
               </div>
@@ -181,7 +187,7 @@ export default function Home() {
                   <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Vercel</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Image src={gitIcon} alt="NextJS"/>
+                  <Image src={gitIcon} alt="NextJS" width={32} height={32}/>
                   <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Git</p>
                 </div>
               </div>
