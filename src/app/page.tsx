@@ -108,91 +108,97 @@ export default function Home() {
       <div className="container mx-auto px-4 flex flex-col gap-8 py-32 ">
         <h2 className={`uppercase text-purple-500 ${anton.className} text-3xl flex gap-4`}>Tech stack <motion.div animate={{rotate: 360}} transition={{repeat: Infinity, repeatType: 'loop', ease: 'linear', duration: 5}}><Slack size={32} /></motion.div></h2>
         <div className="grid grid-cols-3 gap-4 -mx-8 h-full">
-          <TiltedCard>
-            <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
-              <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Frontend</h3>
-              <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
-                <div className="flex items-center gap-2">
-                  <div className="bg-[#222] px-1 py-1 rounded-lg">
-                    <RiTailwindCssFill size={32} fill="#23BCBB" />
+          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
+            <TiltedCard>
+              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
+                <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Frontend</h3>
+                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
+                  <div className="flex items-center gap-2">
+                    <div className="bg-[#222] px-1 py-1 rounded-lg">
+                      <RiTailwindCssFill size={32} fill="#23BCBB" />
+                    </div>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Tailwind CSS</p>
                   </div>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Tailwind CSS</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="bg-[#222] px-1 py-1 rounded-lg">
-                    <RiReactjsFill size={32} fill="#23BCBB" />
+                  <div className="flex items-center gap-2">
+                    <div className="bg-[#222] px-1 py-1 rounded-lg">
+                      <RiReactjsFill size={32} fill="#23BCBB" />
+                    </div>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>React</p>
                   </div>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>React</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="bg-[#222] px-1 py-1 rounded-lg">
-                    <RiNextjsFill size={32} fill="#fff" />
+                  <div className="flex items-center gap-2">
+                    <div className="bg-[#222] px-1 py-1 rounded-lg">
+                      <RiNextjsFill size={32} fill="#fff" />
+                    </div>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>NextJS</p>
                   </div>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>NextJS</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="px-1">
-                    <SiTypescript size={32} fill="#2D79C7" className="rounded-sm"/>
+                  <div className="flex items-center gap-2">
+                    <div className="px-1">
+                      <SiTypescript size={32} fill="#2D79C7" className="rounded-sm"/>
+                    </div>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Typescript</p>
                   </div>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Typescript</p>
+                  <div className="flex items-center gap-2">
+                    <Image src={framerIcon} alt="Framer Motion" width={32} height={32} className="rounded-sm"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Framer</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                  <Image src={bootstrapIcon} alt="Bootstrap" width={32} height={32} className="rounded-sm"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Bootstrap</p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Image src={framerIcon} alt="Framer Motion" width={32} height={32} className="rounded-sm"/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Framer</p>
+              </MotionSpotlightCard>
+            </TiltedCard>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.4 }}>
+            <TiltedCard>
+              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
+                <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Backend</h3>
+                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
+                  <div className="flex items-center gap-2 ">
+                    <Image src={nodejsIcon} alt="Typescript"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>NodeJS</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image src={mysqlIcon} alt="React"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>MySQL</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image src={expressjsIcon} alt="NextJS"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>ExpressJS</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image src={mongodbIcon} alt="Tailwind CSS"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>MongoDB</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image src={postmanIcon} alt="Framer"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Postman</p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                <Image src={bootstrapIcon} alt="Bootstrap" width={32} height={32} className="rounded-sm"/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Bootstrap</p>
+              </MotionSpotlightCard>
+            </TiltedCard>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.6 }}>
+            <TiltedCard>
+              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
+                <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Design & other</h3>
+                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
+                  <div className="flex items-center gap-2 ">
+                    <Image src={figmaIcon} alt="Typescript"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Figma</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image src={vercelIcon} alt="React"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Vercel</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image src={gitIcon} alt="NextJS" width={32} height={32}/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Git</p>
+                  </div>
                 </div>
-              </div>
-            </MotionSpotlightCard>
-          </TiltedCard>
-          <TiltedCard>
-            <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
-              <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Backend</h3>
-              <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
-                <div className="flex items-center gap-2 ">
-                  <Image src={nodejsIcon} alt="Typescript"/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>NodeJS</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Image src={mysqlIcon} alt="React"/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>MySQL</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Image src={expressjsIcon} alt="NextJS"/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>ExpressJS</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Image src={mongodbIcon} alt="Tailwind CSS"/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>MongoDB</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Image src={postmanIcon} alt="Framer"/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Postman</p>
-                </div>
-              </div>
-            </MotionSpotlightCard>
-          </TiltedCard>
-          <TiltedCard>
-            <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
-              <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Design & other</h3>
-              <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
-                <div className="flex items-center gap-2 ">
-                  <Image src={figmaIcon} alt="Typescript"/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Figma</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Image src={vercelIcon} alt="React"/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Vercel</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Image src={gitIcon} alt="NextJS" width={32} height={32}/>
-                  <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Git</p>
-                </div>
-              </div>
-            </MotionSpotlightCard>
-          </TiltedCard>
+              </MotionSpotlightCard>
+            </TiltedCard>
+          </motion.div>
         </div>
       </div>
     </div>
