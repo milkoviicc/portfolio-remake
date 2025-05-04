@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 import Image from "next/image";
 
@@ -201,6 +202,26 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
+
+      <div className="container mx-auto px-4 py-8">
+        <h1 className={`${anton.className} text-3xl text-purple-500 uppercase py-4`}>About me</h1>
+        <h3 className={`${roboto.className} text-6xl text-[#DEDEDE] w-[80%] leading-16 text-shadow-2xs py-4`}>A self-taught Front-End Developer with a passion for building modern, responsive, and user-friendly web applications.</h3>
+        <span className="w-[85%] h-[2px] block my-4 bg-[#494747]"></span>
+        <div className="flex w-full">
+          <div className="flex flex-col w-[45%] text-[#DEDEDE]">
+            <h1 className={`text-6xl ${anton.className} uppercase text-shadow-2xs`}>Marko Milković</h1>
+            <div className="flex gap-2 my-8">
+              <h3 className={`text-3xl ${roboto.className} font-bold uppercase`}>18 years old</h3>
+              <h3 className={`text-3xl ${roboto.className} font-bold uppercase`}>Petrinja, Croatia</h3>
+            </div>
+          </div>
+          <div className="flex flex-col w-[40%]">
+            <p className={`text-[#DEDEDE] ${roboto.className} text-xl py-2 `}>I started coding as a hobby in 2020, and over the years, I’ve built a variety of projects — from simple static websites to full-featured dynamic applications, always driven by a passion for turning designs into engaging, interactive experiences.</p>
+            <p className={`text-[#DEDEDE] ${roboto.className} text-xl py-2 `}>I'm currently looking for internships or part-time opportunities where I can grow as a developer, collaborate with a team, and contribute to meaningful projects.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
