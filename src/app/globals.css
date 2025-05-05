@@ -46,8 +46,12 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #121A2A;
 }
 
+* {
+  cursor: none;
+}
 
 :root {
   --radius: 0.625rem;
@@ -127,7 +131,7 @@ html {
   }
 }
 
-@keyframes floating {
+@keyframes img-float {
   0% {
     transform: translateY(0px);
   }
@@ -138,8 +142,26 @@ html {
     transform: translateY(0px);
   }
 }
+
 .image-floating {
-  animation: floating 3s ease infinite;
+  animation: img-float 3s ease infinite;
+  will-change: transform;
+}
+
+@keyframes icon-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.icon-floating {
+  animation: icon-float 3s ease infinite;
   will-change: transform;
 }
 
