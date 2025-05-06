@@ -18,8 +18,11 @@ import vercelIcon from '../../public/assets/other/vercel-icon.png';
 import gitIcon from '../../public/assets/other/git.svg';
 
 import myImg from '../../public/assets/me.jpg';
+import xemtio from '../../public/assets/xemtio.png';
+import snet from '../../public/assets/snet.jpeg';
+import opgnedaca from '../../public/assets/opgnedaca.png';
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Star } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import {Roboto, Anton} from 'next/font/google';
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -39,9 +42,13 @@ import { FaUser } from "react-icons/fa";
 import { IoHammerSharp } from "react-icons/io5";
 import { useState } from "react";
 
+import { Ultra } from 'next/font/google';
 
-
-
+const ultra = Ultra({
+  subsets: ['latin'],
+  weight: '400', // Only one weight available for Ultra
+  display: 'swap',
+});
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -75,8 +82,8 @@ export default function Home() {
           <NavbarItem value={'Milkoviicc'} className={`uppercase text-4xl text-[#C27AFF] ${roboto.className} font-bold cursor-none`}/>
           <nav className={`flex space-x-8 mr-24 uppercase text-2xl ${roboto.className} font-bold text-[#C27AFF]`}>
             <NavbarItem value={'home'} className="cursor-none"/>
-            <NavbarItem value={'projects'} className="cursor-none"/>
             <NavbarItem value={'about'} className="cursor-none"/>
+            <NavbarItem value={'projects'} className="cursor-none"/>
           </nav>
         </div>
       </div>
@@ -115,14 +122,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4 flex flex-col gap-8 py-32 ">
+      <div className="container mx-auto px-4 flex flex-col gap-8 py-32 z-10">
         <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`uppercase text-purple-500 ${anton.className} text-3xl flex gap-4 icon-floating`}>Tech stack<GiStack size={32}/></motion.h2>
-        <div className="grid grid-cols-3 gap-4 -mx-8 h-full">
-          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
+        <div className="grid grid-cols-3 gap-4 -mx-8 h-full z-10">
+          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className="z-10">
             <TiltedCard>
-              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
+              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full z-10" spotlightColor="rgba(0, 229, 255, 0.2)">
                 <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Frontend</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
+                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10 z-0">
                   <div className="flex items-center gap-2">
                     <div className="bg-[#222] px-1 py-1 rounded-lg">
                       <RiTailwindCssFill size={32} fill="#23BCBB" />
@@ -234,47 +241,94 @@ export default function Home() {
         <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`${anton.className} px-4 text-3xl text-purple-500 uppercase py-4 flex gap-4 icon-floating`}>Projects <IoHammerSharp size={32}/></motion.h1>
       
         <div className="relative flex justify-between w-full h-full">
-          <MotionSpotlightCard onHoverStart={() => console.log('desava se')} onHoverEnd={() => setShowProjectImage(null)} className="flex flex-col text-left py-4 px-6 rounded-lg bg-transparent border-0 w-[650px] h-full z-50" spotlightColor="rgba(0, 229, 255, 0.2)">
-            <h3 className={`text-6xl font-bold uppercase text-[#DEDEDE] py-6 ${roboto.className}`}>Xemtio</h3>
-            <SwapText initialText="XEMTIO is a Croatian company focused on the production and installation of custom-made furniture, offering tailored solutions to fit any space and style." finalText="More info" initialTextClassName={`text-lg font-extralight ${roboto.className}`} className="text-[#DEDEDE] text-lg"/>
-          </MotionSpotlightCard>
+          <motion.div onHoverStart={() => setShowProjectImage('xemtio')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }}>
+            <SpotlightCard className="flex flex-col text-left py-2 px-6 rounded-lg bg-transparent border-0 w-[650px] h-full z-50" spotlightColor="rgba(0, 229, 255, 0.2)">
+              <h3 className={`text-6xl font-bold uppercase text-[#DEDEDE] ${roboto.className} transition-all duration-700 bg-gradient-to-r from-[#C27AFF] to-[#DEDEDE] from-[50%] to-[50%] bg-[length:200%] bg-right bg-clip-text text-transparent group-hover:bg-left flex justify-between items-center`}>Xemtio<span className={`${ultra.className} text-3xl`}>1.</span></h3>
+              <SwapText initialText="XEMTIO is a Croatian company focused on the production and installation of custom-made furniture, offering tailored solutions to fit any space and style." finalText="More info" initialTextClassName={`text-lg font-extralight ${roboto.className}`} className="text-[#DEDEDE] text-lg mt-8"/>
+            </SpotlightCard>
+          </motion.div>
 
           <AnimatePresence>
-          {showProjectImage === 'xemtio' && (
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.4 }}
-              className="absolute top-1/2 right-40 transform -translate-y-1/2"
-            >
-              <Image
-                src={myImg}
-                width={450}
-                height={450}
-                alt="Xemtio project preview"
-                className="rounded-lg"
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
+            {showProjectImage === 'xemtio' && (
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{ duration: 0.4 }}
+                className="absolute top-1/2 right-0 transform -translate-y-1/2"
+              >
+                <Image
+                  src={xemtio}
+                  width={650}
+                  height={650}
+                  alt="Xemtio project preview"
+                  className="rounded-lg"
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-        <div className="flex justify-between w-full h-full">
-          <div className="w-fit h-fit" onMouseEnter={() => setShowProjectImage('snet')} onMouseLeave={() => setShowProjectImage(null)}>
-            <MotionSpotlightCard className="group flex flex-col text-left py-2 rounded-lg border-0 bg-transparent px-4 h-full w-[650px]" spotlightColor="rgba(0, 229, 255, 0.2)">
-              <h3 className={`text-[#DEDEDE] uppercase text-6xl font-bold ${roboto.className} py-8`}>SNET</h3>
-              <SwapText initialTextClassName={`text-lg text-extralight ${roboto.className}`}  initialText="XEMTIO is a Croatian company focused on the production and installation of custom-made furniture, offering tailored solutions to fit any space and style. " finalText="More info" className={`text-[#DEDEDE] text-lg`}></SwapText>
-            </MotionSpotlightCard>
-          </div>
+        <div className="relative flex justify-between w-full h-full">
+          <motion.div onHoverStart={() => setShowProjectImage('snet')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
+            <SpotlightCard className="flex flex-col text-left py-2 px-6 rounded-lg bg-transparent border-0 w-[650px] h-full z-50" spotlightColor="rgba(0, 229, 255, 0.2)">
+              <h3 className={`text-6xl font-bold uppercase text-[#DEDEDE] ${roboto.className} transition-all duration-700 bg-gradient-to-r from-[#C27AFF] to-[#DEDEDE] from-[50%] to-[50%] bg-[length:200%] bg-right bg-clip-text text-transparent group-hover:bg-left flex justify-between items-center`}>SNET<span className={`${ultra.className} text-3xl`}>2.</span></h3>
+              <SwapText initialText="SNET is a social networking app built with Next.JS, ShadCN UI, and Tailwind CSS, designed for a smooth and responsive user experience. SNET is a project that showcases my front-end skills while integrating seamlessly with a powerful backend." finalText="More info" initialTextClassName={`text-lg font-extralight ${roboto.className}`} className="text-[#DEDEDE] text-lg mt-8"/>
+            </SpotlightCard>
+          </motion.div>
+
+          <AnimatePresence>
+            {showProjectImage === 'snet' && (
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{ duration: 0.4 }}
+                className="absolute top-1/2 right-0 transform -translate-y-1/2"
+              >
+                <Image
+                  src={snet}
+                  width={650}
+                  height={650}
+                  alt="Xemtio project preview"
+                  className="rounded-lg"
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-        <div className="flex justify-between w-full h-full">
-          <div className="w-fit h-fit" onMouseEnter={() => setShowProjectImage('opgnedaca')} onMouseLeave={() => setShowProjectImage(null)}>
-            <MotionSpotlightCard className="group flex flex-col text-left py-2 rounded-lg border-0 bg-transparent px-4 h-full w-[650px]" spotlightColor="rgba(0, 229, 255, 0.2)">
-              <h3 className={`text-[#DEDEDE] uppercase text-6xl font-bold ${roboto.className} py-8`}>Opg Nedaća</h3>
-              <SwapText initialTextClassName={`text-lg text-extralight ${roboto.className}`}  initialText="XEMTIO is a Croatian company focused on the production and installation of custom-made furniture, offering tailored solutions to fit any space and style. " finalText="More info" className={`text-[#DEDEDE] text-lg`}></SwapText>
-            </MotionSpotlightCard>
-          </div>
+        <div className="relative flex justify-between w-full h-full">
+          <motion.div onHoverStart={() => setShowProjectImage('opgnedaca')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
+            <SpotlightCard className="flex flex-col text-left py-2 px-6 rounded-lg bg-transparent border-0 w-[650px] h-full z-50" spotlightColor="rgba(0, 229, 255, 0.2)">
+              <h3 className={`text-6xl font-bold uppercase text-[#DEDEDE] ${roboto.className} transition-all duration-700 bg-gradient-to-r from-[#C27AFF] to-[#DEDEDE] from-[50%] to-[50%] bg-[length:200%] bg-right bg-clip-text text-transparent group-hover:bg-left flex justify-between items-center`}>OPG Nedaća<span className={`${ultra.className} text-3xl`}>3.</span></h3>
+              <SwapText initialText="OPG Nedaća is a family-owned organic farm in Croatia, focused on growing eco-friendly fruit and producing high-quality natural products. The website is built with React and features a cart-based ordering system." finalText="More info" initialTextClassName={`text-lg font-extralight ${roboto.className}`} className="text-[#DEDEDE] text-lg mt-8"/>
+            </SpotlightCard>
+          </motion.div>
+
+          <AnimatePresence>
+            {showProjectImage === 'opgnedaca' && (
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{ duration: 0.4 }}
+                className="absolute top-1/2 right-0 transform -translate-y-1/2"
+              >
+                <Image
+                  src={opgnedaca}
+                  width={650}
+                  height={650}
+                  alt="Xemtio project preview"
+                  className="rounded-lg"
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
+      </div>
+
+      <div className="mt-36 py-2 flex flex-col justify-center items-center gap-4">
+        <motion.h4 className={`text-[#DEDEDE] ${roboto.className} text-xl`} initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }}>Designed & Developed by</motion.h4>
+        <motion.h1 className={`text-[#DEDEDE] ${anton.className} text-4xl pb-8`} initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>Marko Milković</motion.h1>
       </div>
     </div>
   );
