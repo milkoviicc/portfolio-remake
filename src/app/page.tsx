@@ -22,7 +22,7 @@ import xemtio from '../../public/assets/xemtio.png';
 import snet from '../../public/assets/snet.jpeg';
 import opgnedaca from '../../public/assets/opgnedaca.png';
 
-import { Github, Linkedin, Mail, Star } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import {Roboto, Anton} from 'next/font/google';
 import { NumberTicker } from "@/components/magicui/number-ticker";
