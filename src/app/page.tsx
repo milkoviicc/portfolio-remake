@@ -79,8 +79,8 @@ export default function Home() {
 
       <div className="container mx-auto px-4 py-8">
         <div className={`flex justify-between items-center py-4 font-roboto`}>
-          <NavbarItem value={'Milkoviicc'} className={`uppercase text-4xl text-[#C27AFF] ${roboto.className} font-bold cursor-none`}/>
-          <nav className={`flex space-x-8 mr-24 uppercase text-2xl ${roboto.className} font-bold text-[#C27AFF]`}>
+          <NavbarItem value={'Milkoviicc'} className={`uppercase text-lg md:text-4xl text-[#C27AFF] ${roboto.className} font-bold cursor-none`}/>
+          <nav className={`hidden md:flex space-x-8 mr-24 uppercase md:text-xl xl:text-2xl ${roboto.className} font-bold text-[#C27AFF]`}>
             <NavbarItem value={'home'} className="cursor-none"/>
             <NavbarItem value={'about'} className="cursor-none"/>
             <NavbarItem value={'projects'} className="cursor-none"/>
@@ -94,7 +94,7 @@ export default function Home() {
             <h1 className={`text-[#DEDEDE] text-shadow ${roboto.className} text-6xl leading-16 font-bold w-fit`}><span className="text-[#C27AFF] text-shadow-2xs">FRONTEND<br/></span>DEVELOPER</h1>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
-            <p className={`text-[#DEDEDE] max-w-full break-words ${roboto.className} text-xl`}>Hey, I&apos;m Marko. A reliable Frontend developer with proven experience in building high-performance, responsive and modern web applications.</p>
+            <p className={`text-[#DEDEDE] max-w-full break-words ${roboto.className} text-base md:text-xl`}>Hey, I&apos;m Marko. A reliable Frontend developer with proven experience in building high-performance, responsive and modern web applications.</p>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
             <InteractiveHoverButton className={`uppercase text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl border-0 outline-0 cursor-none`}>Hire me</InteractiveHoverButton>
