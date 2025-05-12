@@ -79,7 +79,7 @@ export default function Home() {
 
       <div className="container mx-auto px-4 py-8">
         <div className={`flex justify-between items-center py-4 font-roboto`}>
-          <NavbarItem value={'Milkoviicc'} className={`uppercase text-lg md:text-4xl text-[#C27AFF] ${roboto.className} font-bold cursor-none`}/>
+          <NavbarItem value={'Milkoviicc'} className={`uppercase text-2xl md:text-4xl  text-[#C27AFF] ${roboto.className} font-bold cursor-none`}/>
           <nav className={`hidden md:flex space-x-8 mr-24 uppercase md:text-xl xl:text-2xl ${roboto.className} font-bold text-[#C27AFF]`}>
             <NavbarItem value={'home'} className="cursor-none"/>
             <NavbarItem value={'about'} className="cursor-none"/>
@@ -91,13 +91,13 @@ export default function Home() {
       <div className="container mx-auto my-8 px-4 py-8 w-full flex">
         <div className="flex flex-col justify-center gap-8">
           <BoxReveal boxColor={"#8641C1"} duration={0.5}>
-            <h1 className={`text-[#DEDEDE] text-shadow ${roboto.className} text-6xl leading-16 font-bold w-fit`}><span className="text-[#C27AFF] text-shadow-2xs">FRONTEND<br/></span>DEVELOPER</h1>
+            <h1 className={`text-[#DEDEDE] text-shadow ${roboto.className} text-4xl xl:text-6xl xl:leading-16 font-bold w-fit`}><span className="text-[#C27AFF] text-shadow-2xs">FRONTEND<br/></span>DEVELOPER</h1>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
-            <p className={`text-[#DEDEDE] max-w-full break-words ${roboto.className} text-base md:text-xl`}>Hey, I&apos;m Marko. A reliable Frontend developer with proven experience in building high-performance, responsive and modern web applications.</p>
+            <p className={`text-[#DEDEDE] max-w-full break-words ${roboto.className} text-base xl:text-xl`}>Hey, I&apos;m Marko. A reliable Frontend developer with proven experience in building high-performance, responsive and modern web applications.</p>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
-            <InteractiveHoverButton className={`uppercase text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl border-0 outline-0 cursor-none`}>Hire me</InteractiveHoverButton>
+            <InteractiveHoverButton className={`uppercase text-base xl:text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl border-0 outline-0 cursor-none`}>Hire me</InteractiveHoverButton>
           </BoxReveal>
         </div>
         <BlurFade delay={0.25 * 0.05} inView>
@@ -106,30 +106,30 @@ export default function Home() {
       </div>
 
 
-      <div className="w-full h-full flex">
+      <div className="w-full h-full flex ">
         <div className="container mx-auto flex justify-center items-center gap-24">
           <div className="flex items-center gap-4">
-            <h2 className={`${anton.className} font-bold text-6xl text-[#C27AFF]`}><NumberTicker value={5} className="text-[#C27AFF]" />+</h2>
-            <p className={`${roboto.className} text-3xl text-[#DEDEDE]`}>Completed<br/>Projects</p>
+            <h2 className={`${anton.className} font-bold text-4xl xl:text-6xl text-[#C27AFF]`}><NumberTicker value={5} className="text-[#C27AFF]" />+</h2>
+            <p className={`${roboto.className} text-2xl xl:text-3xl text-[#DEDEDE]`}>Completed<br/>Projects</p>
           </div>
           <div className="flex items-center gap-4">
-            <h2 className={`${anton.className} font-bold text-6xl text-[#C27AFF]`}><NumberTicker value={2} className="text-[#C27AFF]" />+</h2>
-            <p className={`${roboto.className} text-3xl text-[#DEDEDE]`}>Years of<br/>Experience</p>
+            <h2 className={`${anton.className} font-bold text-4xl xl:text-6xl text-[#C27AFF]`}><NumberTicker value={2} className="text-[#C27AFF]" />+</h2>
+            <p className={`${roboto.className} text-2xl xl:text-3xl text-[#DEDEDE]`}>Years of<br/>Experience</p>
           </div>
           <div className="flex items-center gap-4">
-            <h2 className={`${anton.className} font-bold text-6xl text-[#C27AFF]`}><NumberTicker value={5} className="text-[#C27AFF]" />+</h2>
-            <p className={`${roboto.className} text-3xl text-[#DEDEDE]`}>Happy<br/>Clients</p>
+            <h2 className={`${anton.className} font-bold text-4xl xl:text-6xl text-[#C27AFF]`}><NumberTicker value={3} className="text-[#C27AFF]" />+</h2>
+            <p className={`${roboto.className} text-2xl xl:text-3xl text-[#DEDEDE]`}>Happy<br/>Clients</p>
           </div>
         </div>
       </div>
       <div className="container mx-auto px-4 flex flex-col gap-8 py-32 z-10">
         <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`uppercase text-purple-500 ${anton.className} text-3xl flex gap-4 icon-floating`}>Tech stack<GiStack size={32}/></motion.h2>
-        <div className="grid grid-cols-3 gap-4 -mx-8 h-full z-10">
+        <div className="grid grid-cols-3 gap-4 -mx-8 h-full z-10 w-full">
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className="z-10">
             <TiltedCard>
               <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full z-10" spotlightColor="rgba(0, 229, 255, 0.2)">
                 <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Frontend</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10 z-0">
+                <div className="col-span-3 flex flex-wrap gap-x-4 gap-12 mt-10 z-10">
                   <div className="flex items-center gap-2">
                     <div className="bg-[#222] px-1 py-1 rounded-lg">
                       <RiTailwindCssFill size={32} fill="#23BCBB" />
@@ -168,9 +168,9 @@ export default function Home() {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.4 }}>
             <TiltedCard>
-              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
+              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 min-h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
                 <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Backend</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
+                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10 z-10">
                   <div className="flex items-center gap-2 ">
                     <Image src={nodejsIcon} alt="Typescript"/>
                     <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>NodeJS</p>
@@ -197,9 +197,9 @@ export default function Home() {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.6 }}>
             <TiltedCard>
-              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
+              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 min-h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
                 <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Other</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10">
+                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10 z-10">
                   <div className="flex items-center gap-2 ">
                     <Image src={figmaIcon} alt="Typescript"/>
                     <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Figma</p>
