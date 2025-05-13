@@ -123,44 +123,44 @@ export default function Home() {
         </div>
       </div>
       <div className="container mx-auto px-4 flex flex-col gap-8 py-32 z-10">
-        <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`uppercase text-purple-500 ${anton.className} text-3xl flex gap-4 icon-floating`}>Tech stack<GiStack size={32}/></motion.h2>
+        <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`uppercase text-purple-500 ${anton.className} text-xl xl:text-3xl flex gap-4 icon-floating`}>Tech stack<GiStack size={32}/></motion.h2>
         <div className="grid grid-cols-3 gap-4 -mx-8 h-full z-10 w-full">
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className="z-10">
             <TiltedCard>
               <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full z-10" spotlightColor="rgba(0, 229, 255, 0.2)">
-                <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Frontend</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-4 gap-12 mt-10 z-10">
-                  <div className="flex items-center gap-2">
+                <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-4xl xl:text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Frontend</h3>
+                <div className="col-span-3 flex flex-wrap gap-x-4 gap-8 mt-10 z-10">
+                  <div className="flex items-center gap-1 xl:gap-2">
                     <div className="bg-[#222] px-1 py-1 rounded-lg">
-                      <RiTailwindCssFill size={32} fill="#23BCBB" />
+                      <RiTailwindCssFill size={32} fill="#23BCBB" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
                     </div>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Tailwind CSS</p>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>Tailwind CSS</p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1 xl:gap-2">
                     <div className="bg-[#222] px-1 py-1 rounded-lg">
-                      <RiReactjsFill size={32} fill="#23BCBB" />
+                      <RiReactjsFill size={32} fill="#23BCBB" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]" />
                     </div>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>React</p>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>React</p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1 xl:gap-2">
                     <div className="bg-[#222] px-1 py-1 rounded-lg">
-                      <RiNextjsFill size={32} fill="#fff" />
+                      <RiNextjsFill size={32} fill="#fff" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
                     </div>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>NextJS</p>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>NextJS</p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1 xl:gap-2">
                     <div className="px-1">
-                      <SiTypescript size={32} fill="#2D79C7" className="rounded-sm"/>
+                      <SiTypescript size={32} fill="#2D79C7" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
                     </div>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Typescript</p>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>Typescript</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Image src={framerIcon} alt="Framer Motion" width={32} height={32} className="rounded-sm"/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Framer</p>
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Image src={framerIcon} alt="Framer Motion" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>Framer</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                  <Image src={bootstrapIcon} alt="Bootstrap" width={32} height={32} className="rounded-sm"/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Bootstrap</p>
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Image src={bootstrapIcon} alt="Bootstrap" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>Bootstrap</p>
                   </div>
                 </div>
               </MotionSpotlightCard>
@@ -168,28 +168,28 @@ export default function Home() {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.4 }}>
             <TiltedCard>
-              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 min-h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
-                <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Backend</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10 z-10">
-                  <div className="flex items-center gap-2 ">
-                    <Image src={nodejsIcon} alt="Typescript"/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>NodeJS</p>
+              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full z-10" spotlightColor="rgba(0, 229, 255, 0.2)">
+                <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-4xl xl:text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Backend</h3>
+                <div className="col-span-3 flex flex-wrap gap-x-4 xl:gap-x-8 gap-8 mt-10 z-10">
+                  <div className="flex items-center gap-1 xl:gap-2 ">
+                    <Image src={nodejsIcon} alt="NodeJS" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>NodeJS</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Image src={mysqlIcon} alt="React"/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>MySQL</p>
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Image src={mysqlIcon} alt="MySQL" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>MySQL</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Image src={expressjsIcon} alt="NextJS"/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>ExpressJS</p>
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Image src={expressjsIcon} alt="ExpressJS" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>ExpressJS</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Image src={mongodbIcon} alt="Tailwind CSS"/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>MongoDB</p>
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Image src={mongodbIcon} alt="MongoDB" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>MongoDB</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Image src={postmanIcon} alt="Framer"/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Postman</p>
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Image src={postmanIcon} alt="Postman" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>Postman</p>
                   </div>
                 </div>
               </MotionSpotlightCard>
@@ -197,20 +197,20 @@ export default function Home() {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.6 }}>
             <TiltedCard>
-              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg bg-transparent border-0 min-h-full" spotlightColor="rgba(0, 229, 255, 0.2)">
-                <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Other</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-8 gap-12 mt-10 z-10">
-                  <div className="flex items-center gap-2 ">
-                    <Image src={figmaIcon} alt="Typescript"/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Figma</p>
+              <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full z-10" spotlightColor="rgba(0, 229, 255, 0.2)">
+                <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-4xl xl:text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Other</h3>
+                <div className="col-span-3 flex flex-wrap gap-x-8 gap-8 mt-10 z-10">
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Image src={figmaIcon} alt="Figma" className="w-2/3 h-2/3 object-contain xl:w-full xl:h-full rounded-sm"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>Figma</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Image src={vercelIcon} alt="React"/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Vercel</p>
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Image src={vercelIcon} alt="Vercel" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>Vercel</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Image src={gitIcon} alt="NextJS" width={32} height={32}/>
-                    <p className={`text-[#DEDEDE] ${roboto.className} text-xl`}>Git</p>
+                  <div className="flex items-center gap-1 xl:gap-2">
+                    <Image src={gitIcon} alt="Git" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
+                    <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>Git</p>
                   </div>
                 </div>
               </MotionSpotlightCard>
@@ -220,7 +220,7 @@ export default function Home() {
       </div>
 
       <div className="container mx-auto px-4">
-        <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`${anton.className} text-3xl text-purple-500 uppercase py-4 flex gap-4 icon-floating`}>About me <FaUser size={32}/></motion.h1>
+        <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`${anton.className} text-xl xl:text-3xl text-purple-500 uppercase py-4 flex gap-4 icon-floating`}>About me <FaUser size={32}/></motion.h1>
         <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className={`${roboto.className} text-6xl text-[#DEDEDE] w-[80%] leading-16 text-shadow-2xs py-4`}>A self-taught Front-End Developer with a passion for building modern, responsive, and user-friendly web applications.</motion.h3>
         <motion.span initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className="w-[85%] h-[2px] block my-4 bg-[#494747]"></motion.span>
         <div className="flex gap-4 w-full my-8">
@@ -238,7 +238,7 @@ export default function Home() {
       </div>
 
       <div className="container mx-auto py-8 flex flex-col gap-8">
-        <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`${anton.className} px-4 text-3xl text-purple-500 uppercase py-4 flex gap-4 icon-floating`}>Projects <IoHammerSharp size={32}/></motion.h1>
+        <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`${anton.className} px-4 text-xl xl:text-3xl text-purple-500 uppercase py-4 flex gap-4 icon-floating`}>Projects <IoHammerSharp size={32}/></motion.h1>
       
         <div className="relative flex justify-between w-full h-full">
           <motion.div onHoverStart={() => setShowProjectImage('xemtio')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }}>
