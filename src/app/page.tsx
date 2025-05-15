@@ -124,12 +124,12 @@ export default function Home() {
       </div>
       <div className="container mx-auto px-4 flex flex-col gap-8 py-32 z-10">
         <motion.h2 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`uppercase text-purple-500 ${anton.className} text-xl xl:text-3xl flex gap-4 icon-floating`}>Tech stack<GiStack size={32}/></motion.h2>
-        <div className="grid grid-cols-3 gap-4 -mx-8 h-full z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-4 -mx-8 h-full z-10 w-full">
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className="z-10">
             <TiltedCard>
               <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full z-10" spotlightColor="rgba(0, 229, 255, 0.2)">
                 <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-4xl xl:text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Frontend</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-4 gap-8 mt-10 z-10">
+                <div className="flex flex-wrap w-[500px] lg:w-full gap-x-4 gap-8 mt-6 lg:mt-10 z-10">
                   <div className="flex items-center gap-1 xl:gap-2">
                     <div className="bg-[#222] px-1 py-1 rounded-lg">
                       <RiTailwindCssFill size={32} fill="#23BCBB" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
@@ -170,7 +170,7 @@ export default function Home() {
             <TiltedCard>
               <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full z-10" spotlightColor="rgba(0, 229, 255, 0.2)">
                 <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-4xl xl:text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Backend</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-4 xl:gap-x-8 gap-8 mt-10 z-10">
+                <div className="flex flex-wrap w-[500px] lg:w-full gap-x-4 xl:gap-x-8 gap-8 mt-6 lg:mt-10 z-10">
                   <div className="flex items-center gap-1 xl:gap-2 ">
                     <Image src={nodejsIcon} alt="NodeJS" className="w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"/>
                     <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>NodeJS</p>
@@ -199,7 +199,7 @@ export default function Home() {
             <TiltedCard>
               <MotionSpotlightCard className="group flex flex-col text-left py-4 rounded-lg border-0 bg-transparent h-full z-10" spotlightColor="rgba(0, 229, 255, 0.2)">
                 <h3 className={`uppercase ${anton.className} text-shadow text-[#DEDEDE] text-4xl xl:text-6xl group-hover:text-[#C27AFF] duration-300 ease-in-out`}>Other</h3>
-                <div className="col-span-3 flex flex-wrap gap-x-8 gap-8 mt-10 z-10">
+                <div className="flex flex-wrap w-[500px] lg:w-full gap-x-8 gap-8 mt-6 lg:mt-10 z-10">
                   <div className="flex items-center gap-1 xl:gap-2">
                     <Image src={figmaIcon} alt="Figma" className="w-2/3 h-2/3 object-contain xl:w-full xl:h-full rounded-sm"/>
                     <p className={`text-[#DEDEDE] ${roboto.className} text-lg xl:text-xl`}>Figma</p>
@@ -221,7 +221,7 @@ export default function Home() {
 
       <div className="container mx-auto px-4">
         <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`${anton.className} text-xl xl:text-3xl text-purple-500 uppercase py-4 flex gap-4 icon-floating`}>About me <FaUser size={32}/></motion.h1>
-        <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className={`${roboto.className} text-6xl text-[#DEDEDE] w-[80%] leading-16 text-shadow-2xs py-4`}>A self-taught Front-End Developer with a passion for building modern, responsive, and user-friendly web applications.</motion.h3>
+        <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className={`${roboto.className} text-3xl lg:text-6xl text-[#DEDEDE] w-[80%] leading-8 lg:leading-16 text-shadow-2xs py-4`}>A self-taught Front-End Developer with a passion for building modern, responsive, and user-friendly web applications.</motion.h3>
         <motion.span initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className="w-[85%] h-[2px] block my-4 bg-[#494747]"></motion.span>
         <div className="flex gap-4 w-full my-8">
           <div className="flex flex-col gap-4 w-[45%]">

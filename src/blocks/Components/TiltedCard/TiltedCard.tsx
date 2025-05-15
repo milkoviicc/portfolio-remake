@@ -21,7 +21,6 @@ const springValues: SpringOptions = {
 };
 
 export default function TiltedCard({
-  containerHeight = "300px",
   containerWidth = "100%",
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
@@ -82,9 +81,8 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"
+      className="relative w-full h-[150px] lg:h-[300px] [perspective:800px] flex flex-col items-center justify-center"
       style={{
-        height: containerHeight,
         width: containerWidth,
       }}
       onMouseMove={handleMouse}
@@ -108,7 +106,7 @@ export default function TiltedCard({
         }}
       >
         {children && (
-          <motion.div className="absolute top-0 left-0 w-full h-full">{children}</motion.div>
+          <motion.div className="absolute top-0 left-0 w-full h-fit lg:h-full">{children}</motion.div>
         )}
 
         {displayOverlayContent && overlayContent && (
