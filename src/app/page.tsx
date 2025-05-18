@@ -139,7 +139,7 @@ export default function Home() {
             <p className={`text-[#DEDEDE] max-w-full break-words ${roboto.className} text-lg md:text-base xl:text-xl`}>Hey, I&apos;m Marko. A reliable Frontend developer with proven experience in building high-performance, responsive and modern web applications.</p>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
-            <InteractiveHoverButton className={`uppercase text-xl md:text-base xl:text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl border-0 outline-0 cursor-none`}>Hire me</InteractiveHoverButton>
+            <a href="https://www.linkedin.com/in/milkoviicc" target="_blank"><InteractiveHoverButton className={`uppercase text-xl md:text-base xl:text-xl ${roboto.className} w-fit text-[#DEDEDE] px-8 py-2 bg-purple-700 rounded-xl border-0 outline-0 cursor-none`}>Hire me</InteractiveHoverButton></a>
           </BoxReveal>
         </div>
         <BlurFade delay={0.25 * 0.05} inView>
