@@ -49,8 +49,17 @@ html {
   background-color: #121A2A;
 }
 
-* {
-  cursor: none;
+
+@media screen and (max-width: 1024px) {
+  * {
+    cursor: default;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  * {
+    cursor: none;
+  }
 }
 
 :root {
