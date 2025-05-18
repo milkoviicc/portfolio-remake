@@ -80,7 +80,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex flex-col w-full h-full bg-[#121A2A]">
+    <div className="relative flex flex-col w-full h-full bg-[#121A2A]" id="home">
       <Particles quantity={50} className="fixed w-full"/>
       {showCursor && <SmoothCursor />}
       <div className="hidden lg:flex flex-col fixed bottom-5 gap-3 w-fit px-6">
@@ -90,7 +90,7 @@ export default function Home() {
       </div>
 
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-2 fixed w-full top-0 left-1/2 transform -translate-x-1/2 z-50 bg-[#121A2A]">
         <div className={`flex justify-between items-center py-4 font-roboto`}>
           <NavbarItem value={'Milkoviicc'} className={`flex justify-center items-center h-full uppercase text-2xl md:text-4xl text-[#C27AFF] z-50 ${roboto.className} font-bold cursor-none`}/>
           <nav className={`hidden md:flex space-x-8 mr-24 uppercase md:text-xl xl:text-2xl ${roboto.className} font-bold text-[#C27AFF]`}>
@@ -103,36 +103,36 @@ export default function Home() {
             <span className={`block h-1 w-8 bg-[#DEDEDE] rounded my-1 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}/>
             <span className={`block h-1 w-8 bg-[#DEDEDE] rounded transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}/>
           </button>
-          <AnimatePresence>
-            {mobileMenuOpen && (
-              <motion.nav initial={{ x: '100%' }} animate={{ x: mobileMenuOpen ? 0 : '100%' }} exit={{ x: '100%' }} transition={{ type: 'tween', duration: 0.4 }} className={`fixed z-40 top-0 right-0 w-full h-full flex flex-col justify-center items-center uppercase space-y-12 text-3xl bg-[#121A2A] ${roboto.className} font-bold text-[#C27AFF]`}>
-                <div className="flex flex-col gap-4">
-                  <NavbarItem value={'Home'} className="cursor-none"/>
-                  <NavbarItem value={'About'} className="cursor-none"/>
-                  <NavbarItem value={'Projects'} className="cursor-none"/>
-                </div>
-                <div className="flex gap-2 w-full justify-center items-center">
-                  <span className="border-t-2 block w-[20%] border-purple-500"></span>
-                  ~
-                  <span className="border-t-2 block w-[20%] border-purple-500"></span>
-                </div>
-                <div className="flex flex-col gap-3 w-fit px-6">
-                  <a href="https://github.com/milkoviicc" className="text-[#C27AFF] flex gap-2 text-3xl" target="_blank"><Github size={32}/></a>
-                  <a href="https://linkedin.com/in/milkoviicc" className="text-[#C27AFF] flex gap-2 text-3xl" target="_blank"><Linkedin size={32}/></a>
-                  <a href="mailto:marko.milkovicc@gmail.com" className="text-[#C27AFF] flex gap-2 text-3xl" target="_blank"><Mail size={32}/></a>
-                </div>
-              </motion.nav>
-            )}
-          </AnimatePresence>
         </div>
       </div>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.nav initial={{ x: '100%' }} animate={{ x: mobileMenuOpen ? 0 : '100%' }} exit={{ x: '100%' }} transition={{ type: 'tween', duration: 0.4 }} className={`fixed z-50 top-14 right-0 w-full h-full flex flex-col justify-center items-center uppercase space-y-12 text-3xl bg-[#121A2A] ${roboto.className} font-bold text-[#C27AFF]`}>
+            <div className="flex flex-col gap-4">
+              <NavbarItem value={'home'} className="cursor-none"/>
+              <NavbarItem value={'about'} className="cursor-none"/>
+              <NavbarItem value={'projects'} className="cursor-none"/>
+            </div>
+            <div className="flex gap-2 w-full justify-center items-center">
+              <span className="border-t-2 block w-[20%] border-purple-500"></span>
+              ~
+              <span className="border-t-2 block w-[20%] border-purple-500"></span>
+            </div>
+            <div className="flex flex-col gap-3 w-fit px-6">
+              <a href="https://github.com/milkoviicc" className="text-[#C27AFF] flex gap-2 text-3xl" target="_blank"><Github size={32}/></a>
+              <a href="https://linkedin.com/in/milkoviicc" className="text-[#C27AFF] flex gap-2 text-3xl" target="_blank"><Linkedin size={32}/></a>
+              <a href="mailto:marko.milkovicc@gmail.com" className="text-[#C27AFF] flex gap-2 text-3xl" target="_blank"><Mail size={32}/></a>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
 
       
-      <div className="container mx-auto my-8 px-4 py-8 w-full flex flex-col md:flex-row">
+      <div className="container mx-auto mt-32 px-4 py-8 w-full flex flex-col md:flex-row">
         <div className="flex flex-col justify-center gap-8">
           <BoxReveal boxColor={"#8641C1"} duration={0.5}>
             <div>
-              <h1 className={`text-[#DEDEDE] text-shadow ${roboto.className} text-5xl leading-16 md:text-4xl xl:text-6xl xl:leading-16 font-bold w-fit`}><span className="text-[#C27AFF] text-shadow-2xs">FRONTEND<br/></span>DEVELOPER</h1>
+              <h1 className={`text-[#DEDEDE] text-shadow ${roboto.className} text-5xl leading-12 md:text-4xl xl:text-6xl xl:leading-16 font-bold w-fit`}><span className="text-[#C27AFF] text-shadow-2xs">FRONTEND<br/></span>DEVELOPER</h1>
             </div>
           </BoxReveal>
           <BoxReveal boxColor="#8641C1" duration={0.5}>
@@ -148,7 +148,7 @@ export default function Home() {
       </div>
 
 
-      <div className="w-full h-full flex ">
+      <div className="w-full h-full flex mt-24">
         <div className="container mx-auto flex flex-wrap justify-center items-center gap-24">
           <div className="flex items-center gap-4">
             <h2 className={`${anton.className} font-bold text-6xl  text-[#C27AFF]`}><NumberTicker value={5} className="text-[#C27AFF]" />+</h2>
@@ -348,7 +348,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 pt-16 md:pt-0">
+      <div className="container mx-auto px-4 pt-16 md:pt-0" id="about">
         <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`${anton.className} text-xl xl:text-3xl text-purple-500 uppercase py-4 flex gap-4 icon-floating`}>About me <FaUser size={32}/></motion.h1>
         <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className={`${roboto.className} text-3xl lg:text-6xl text-[#DEDEDE] w-[80%] leading-8 lg:leading-16 text-shadow-2xs py-4`}>A self-taught Front-End Developer with a passion for building modern, responsive, and user-friendly web applications.</motion.h3>
         <motion.span initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }} className="w-[85%] h-[2px] block my-4 bg-[#494747]"></motion.span>
@@ -366,7 +366,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mx-auto py-8 flex flex-col gap-8">
+      <div className="container mx-auto py-8 flex flex-col gap-8 z-0" id="projects">
         <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`${anton.className} px-4 text-xl xl:text-3xl text-purple-500 uppercase py-4 flex gap-4 icon-floating`}>Projects <IoHammerSharp size={32}/></motion.h1>
       
         <div className="relative flex justify-between w-full h-full">
