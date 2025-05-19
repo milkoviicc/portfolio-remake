@@ -47,6 +47,14 @@
 html {
   scroll-behavior: smooth;
   background-color: #121A2A;
+  forced-color-adjust: none;
+}
+body {
+  forced-color-adjust: none;
+}
+
+* {
+  forced-color-adjust: none;
 }
 
 
