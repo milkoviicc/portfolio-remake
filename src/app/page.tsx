@@ -402,7 +402,7 @@ export default function Home() {
           </AnimatePresence>
         </div>
         <div className="relative flex justify-between w-full h-full">
-          <motion.div onClick={() => window.open('https://opgnedacaa.vercel.app', '_blank')} onHoverStart={() => setShowProjectImage('opgnedaca')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
+          <motion.div onClick={() => window.open('https://opgnedaca.vercel.app', '_blank')} onHoverStart={() => setShowProjectImage('opgnedaca')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
             <SpotlightCard className="flex flex-col text-left py-2 px-4 md:px-6 rounded-lg bg-transparent border-0 w-full max-w-[500px] md:w-[650px] md:max-w-full h-full z-50" spotlightColor="rgba(0, 229, 255, 0.2)">
               <h3 className={`text-3xl lg:text-6xl font-bold uppercase text-[#DEDEDE] ${roboto.className} transition-all duration-700 bg-gradient-to-r from-[#C27AFF] to-[#DEDEDE] from-[50%] to-[50%] bg-[length:200%] bg-right bg-clip-text text-transparent group-hover:bg-left flex justify-between items-center`}>OPG Nedaća<span className={`${ultra.className} text-3xl`}>3.</span></h3>
               <p className={`text-sm lg:text-lg font-extralight ${roboto.className} w-[90%] lg:w-full text-[#DEDEDE] mt-2 lg:mt-8`}>OPG Nedaća is a family-owned organic farm in Croatia, focused on growing eco-friendly fruit and producing high-quality natural products. The website is built with React and features a cart-based ordering system.</p>
