@@ -370,7 +370,7 @@ export default function Home() {
         <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }} className={`${anton.className} px-4 text-xl xl:text-3xl text-purple-500 uppercase py-4 flex gap-4 icon-floating`}>Projects <IoHammerSharp size={32}/></motion.h1>
       
         <div className="relative flex justify-between w-full h-full">
-          <motion.div onHoverStart={() => setShowProjectImage('xemtio')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }}>
+          <motion.div onClick={() => window.open('https://www.xemtio.com/', '_blank')} onHoverStart={() => setShowProjectImage('xemtio')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5 }}>
             <SpotlightCard className="flex flex-col text-left py-2 px-4 md:px-6 rounded-lg bg-transparent border-0 w-full max-w-[500px] md:w-[650px] md:max-w-full h-full z-50" spotlightColor="rgba(0, 229, 255, 0.2)">
               <h3 className={`text-3xl lg:text-6xl font-bold uppercase text-[#DEDEDE] ${roboto.className} transition-all duration-700 bg-gradient-to-r from-[#C27AFF] to-[#DEDEDE] from-[50%] to-[50%] bg-[length:200%] bg-right bg-clip-text text-transparent group-hover:bg-left flex justify-between items-center`}>Xemtio<span className={`${ultra.className} text-3xl`}>1.</span></h3>
               <p className={`text-sm lg:text-lg font-extralight ${roboto.className} w-[90%] lg:w-full text-[#DEDEDE] mt-2 lg:mt-8`}>XEMTIO is a Croatian company focused on the production and installation of custom-made furniture, offering tailored solutions to fit any space and style.</p>
@@ -386,7 +386,7 @@ export default function Home() {
           </AnimatePresence>
         </div>
         <div className="relative flex justify-between w-full h-full">
-          <motion.div onHoverStart={() => setShowProjectImage('snet')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
+          <motion.div onClick={() => window.open('https://zavrsni-snet.vercel.app/', '_blank')} onHoverStart={() => setShowProjectImage('snet')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
             <SpotlightCard className="flex flex-col text-left py-2 px-4 md:px-6 rounded-lg bg-transparent border-0 w-full max-w-[500px] md:w-[650px] md:max-w-full h-full z-50" spotlightColor="rgba(0, 229, 255, 0.2)">
               <h3 className={`text-3xl lg:text-6xl font-bold uppercase text-[#DEDEDE] ${roboto.className} transition-all duration-700 bg-gradient-to-r from-[#C27AFF] to-[#DEDEDE] from-[50%] to-[50%] bg-[length:200%] bg-right bg-clip-text text-transparent group-hover:bg-left flex justify-between items-center`}>SNET<span className={`${ultra.className} text-3xl`}>2.</span></h3>
               <p className={`text-sm lg:text-lg font-extralight ${roboto.className} w-[90%] lg:w-full text-[#DEDEDE] mt-2 lg:mt-8`}>SNET is a social networking app built with Next.JS, ShadCN UI, and Tailwind CSS, designed for a smooth and responsive user experience. SNET is a project that showcases my front-end skills while integrating seamlessly with a powerful backend.</p>
@@ -396,13 +396,13 @@ export default function Home() {
           <AnimatePresence>
             {showProjectImage === 'snet' && (
               <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} className="absolute top-1/2 right-0 transform -translate-y-1/2 hidden md:block">
-                <Image src={snet} width={650} height={650} alt="Xemtio project preview" className="rounded-lg"/>
+                <Image src={snet} width={650} height={650} alt="SNET project preview" className="rounded-lg"/>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
         <div className="relative flex justify-between w-full h-full">
-          <motion.div onHoverStart={() => setShowProjectImage('opgnedaca')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
+          <motion.div onClick={() => window.open('https://opgnedacaa.vercel.app', '_blank')} onHoverStart={() => setShowProjectImage('opgnedaca')} onHoverEnd={() => setShowProjectImage(null)} className="group" initial={{ opacity: 0, y: 50 }} whileInView={{opacity: 1, y: 0}} transition={{ duration: 0.5, delay: 0.2 }}>
             <SpotlightCard className="flex flex-col text-left py-2 px-4 md:px-6 rounded-lg bg-transparent border-0 w-full max-w-[500px] md:w-[650px] md:max-w-full h-full z-50" spotlightColor="rgba(0, 229, 255, 0.2)">
               <h3 className={`text-3xl lg:text-6xl font-bold uppercase text-[#DEDEDE] ${roboto.className} transition-all duration-700 bg-gradient-to-r from-[#C27AFF] to-[#DEDEDE] from-[50%] to-[50%] bg-[length:200%] bg-right bg-clip-text text-transparent group-hover:bg-left flex justify-between items-center`}>OPG Nedaća<span className={`${ultra.className} text-3xl`}>3.</span></h3>
               <p className={`text-sm lg:text-lg font-extralight ${roboto.className} w-[90%] lg:w-full text-[#DEDEDE] mt-2 lg:mt-8`}>OPG Nedaća is a family-owned organic farm in Croatia, focused on growing eco-friendly fruit and producing high-quality natural products. The website is built with React and features a cart-based ordering system.</p>
@@ -412,7 +412,7 @@ export default function Home() {
           <AnimatePresence>
             {showProjectImage === 'opgnedaca' && (
               <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 50 }} transition={{ duration: 0.4 }} className="absolute top-1/2 right-0 transform -translate-y-1/2 hidden md:block">
-                <Image src={opgnedaca} width={650} height={650} alt="Xemtio project preview" className="rounded-lg"/>
+                <Image src={opgnedaca} width={650} height={650} alt="OPG Nedaća project preview" className="rounded-lg"/>
               </motion.div>
             )}
           </AnimatePresence>
