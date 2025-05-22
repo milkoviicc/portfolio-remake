@@ -1,4 +1,5 @@
 // pages/projects/[projectName].tsx
+/*
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { projects, Project } from '../../data/projects'
 
@@ -14,6 +15,7 @@ export default function ProjectPage({ project }: Props) {
 }
 
 // getStaticPaths kreira putanju tj stranicu za svaki projekt u projects arrayu
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = projects.map((p) => ({
     params: { projectName: p.projectName } 
@@ -33,3 +35,4 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 
   return { props: { project } }
 }
+*/
